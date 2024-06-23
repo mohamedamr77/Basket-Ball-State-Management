@@ -1,8 +1,10 @@
+import 'package:basketballsm/cubit/getCubit.dart';
 import 'package:basketballsm/features/views/team_a.dart';
 import 'package:basketballsm/features/views/team_b.dart';
 import 'package:basketballsm/features/widgets/vertical_divider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -30,7 +32,7 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
+           const  Row(
               children: [
                 TeamA(),
                 CustomVerticalDivider(),
@@ -40,14 +42,17 @@ class HomeScreen extends StatelessWidget {
             Align(
                 alignment: Alignment.bottomCenter,
                 heightFactor: 2.5,
-                child: ElevatedButton(onPressed: (){}, child: Text("Reset",
+                child: ElevatedButton(onPressed: (){
+                  BlocProvider.of<GetBasketBallCubit>(context).scoreTeamA=0;
+                  BlocProvider.of<GetBasketBallCubit>(context).scoreTeamB=0;
+                }, child: Text("Reset",
                   style: TextStyle(color :Colors.white),
                 ),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.orange
                 ),
                 ),
-            )
+            ),
           ],
         ),
       ),

@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 
 class Score extends StatelessWidget {
-  const Score({super.key});
+  Score({super.key,required this.score});
+  int score;
   @override
   Widget build(BuildContext context) {
-    return  Text("0", style: TextStyle(
-      color: Colors.black,
-      fontSize: 170,
-      fontWeight: FontWeight.w400,
-    ),);
+    return  FittedBox(
+      child: Text("$score", style: TextStyle(
+        color: Colors.black,
+        fontSize: 170,
+        fontWeight: FontWeight.w400,
+      ),),
+    );
   }
 }

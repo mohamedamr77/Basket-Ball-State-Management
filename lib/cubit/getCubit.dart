@@ -4,13 +4,14 @@ class GetBasketBallCubit extends Cubit<BasketBallState>{
   GetBasketBallCubit():super(BasketBallInitalState());
   int scoreTeamA=0;
   int scoreTeamB=0;
-  GetTeam_A_Play({required int incrementPoint,required String teamName}){
+  teamPlay({required int incrementPoint,required String teamName}){
      if(teamName=="a"||teamName=="A"){
        scoreTeamA+=incrementPoint;
-     emit(TeamAState());
+       emit(TeamAState());
      }
      else if(teamName=="b"||teamName=="B"){{
        scoreTeamB+=incrementPoint;
+
        emit(TeamBState());
      }
      }
