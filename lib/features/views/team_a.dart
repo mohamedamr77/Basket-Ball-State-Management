@@ -1,4 +1,5 @@
 import 'package:basketballsm/cubit/getCubit.dart';
+import 'package:basketballsm/cubit/getState.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -14,9 +15,11 @@ class TeamA extends StatelessWidget {
     return Column(
       children: [
         const NameTeam(nameTeam: 'Team A',),
-        Score(
-          score: BlocProvider.of<GetBasketBallCubit>(context).scoreTeamA,
-        ),
+        BlocBuilder<GetBasketBallCubit,BasketBallState>(builder: (BuildContext context, state) {
+          return Score(
+            score: BlocProvider.of<GetBasketBallCubit>(context).scoreTeamA,
+          );
+        },),
         CustomIncrementButton(point: 1, onPressed: () {
           BlocProvider.of<GetBasketBallCubit>(context).teamPlay(incrementPoint: 1, teamName: "a");
         },),
