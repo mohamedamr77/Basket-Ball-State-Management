@@ -15,5 +15,4 @@ class GetBasketBallCubit extends Cubit<BasketBallState>{
      }
      }
   }
-
 }
