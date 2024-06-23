@@ -12,7 +12,7 @@ class CustomVerticalDivider extends StatelessWidget {
       ),
       child: SizedBox(
         height: MediaQuery.sizeOf(context).height*0.55,
-        child: VerticalDivider(
+        child: const VerticalDivider(
           width: 10,
           thickness: 1,
         ),

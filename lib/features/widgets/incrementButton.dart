@@ -8,8 +8,12 @@ class CustomIncrementButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return  ElevatedButton(onPressed: onPressed,
       style: ElevatedButton.styleFrom(
-          backgroundColor: Color(0xffF29607)
-      ), child: Text("Add $point Points"),
+        backgroundColor: Colors.blue,
+      ), child: Text("Add $point Points",
+      style: TextStyle(
+        color: Colors.white,
+      ),
+      ),
 
     );
   }
