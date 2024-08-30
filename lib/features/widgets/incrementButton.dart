@@ -10,7 +10,7 @@ class CustomIncrementButton extends StatelessWidget {
       style: ElevatedButton.styleFrom(
         backgroundColor: Colors.blue,
       ), child: Text("Add $point Points",
-      style: TextStyle(
+      style: const TextStyle(
         color: Colors.white,
       ),
       ),

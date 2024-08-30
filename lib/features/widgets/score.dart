@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class Score extends StatelessWidget {
   final int score;
 
-  const Score({Key? key, required this.score}) : super(key: key);
+  const Score({super.key, required this.score});
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +11,7 @@ class Score extends StatelessWidget {
     double adaptiveFontSize = screenWidth * 0.21; // Adjust the factor as needed
 
     return Padding(
-      padding:  EdgeInsets.symmetric(vertical: 40),
+      padding:  const EdgeInsets.symmetric(vertical: 40),
       child: FittedBox(
         child: SizedBox(
           width: 130, // Fixed width to ensure space does not change

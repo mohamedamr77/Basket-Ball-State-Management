@@ -1,9 +1,7 @@
-import 'package:basketballsm/cubit/getCubit.dart';
 import 'package:basketballsm/features/views/team_a.dart';
 import 'package:basketballsm/features/views/team_b.dart';
 import 'package:basketballsm/features/widgets/vertical_divider.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'widgets/resetbutton.dart';
 
@@ -30,10 +28,10 @@ class HomeScreen extends StatelessWidget {
           horizontal: MediaQuery.sizeOf(context).width * 0.08,
           vertical: MediaQuery.sizeOf(context).height * 0.05,
         ),
-        child: Column(
+        child: const Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Row(
+            Row(
               children: [
                 TeamA(),
                 CustomVerticalDivider(),
