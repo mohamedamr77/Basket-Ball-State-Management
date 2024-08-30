@@ -1,8 +1,8 @@
-import 'package:basketballsm/cubit/getCubit.dart';
+import 'package:basketballsm/cubit/get_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'features/homeScreen.dart';
+import 'features/home_screen.dart';
 
 void main() {
   runApp(const MyApp());

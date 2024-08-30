@@ -1,8 +1,8 @@
-import 'package:basketballsm/cubit/getCubit.dart';
+import 'package:basketballsm/cubit/get_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../cubit/getState.dart';
-import '../widgets/incrementButton.dart';
+import '../../cubit/get_state.dart';
+import '../widgets/increment_button.dart';
 import '../widgets/name_team.dart';
 import '../widgets/score.dart';
 

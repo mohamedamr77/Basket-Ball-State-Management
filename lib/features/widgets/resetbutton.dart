@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../cubit/getCubit.dart';
+import '../../cubit/get_cubit.dart';
 
 class ResetButton extends StatelessWidget {
   const ResetButton({super.key});
